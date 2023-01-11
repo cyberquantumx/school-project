@@ -1,0 +1,150 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=PT+Mono&display=swap');
+
+*::selection, *::-moz-selection {
+    background: #E5BA73 ;
+}
+
+* {
+    font-family: 'Inter', sans-serif;
+    letter-spacing: 0.1px;
+}
+
+html, body {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #FAF8F1;
+    color: rgb(32,32,32);
+}
+
+figcaption {
+    color: rgb(64,64,64);
+    background-color: none;
+    padding: 5px 20px;
+    margin-left: auto;
+    margin-right: auto;
+    width:fit-content;
+    border-radius: 15px;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.darkmode--activated figcaption {
+    background: none;
+    border: 3px solid #FAEAB1;
+    padding: 2px 20px;
+    color: #FAEAB1;
+}
+
+.container {
+    line-height: 24px;
+    font-size: 18px;
+}
+
+.header > .header__title {
+    font-weight: 800;
+    font-size: 36px;
+}
+
+.header {
+    border-radius: 5px;
+    margin-top: 16px;
+    border: 4px  solid rgb(32,32,32);
+}
+
+.content > .content__title {
+    font-size: 48px;
+    width: 100%;
+    line-height: 1.0;
+    font-weight: 800;
+}
+.content__data > .content__subtitle {
+    font-size: 36px;
+    font-weight: 800;
+    line-height: 1.0;
+    width: 100%;
+    margin-top: 15%;
+    letter-spacing: 0.4px;
+}
+
+.content__image {
+    width: 100%;
+    border-radius: 5px;
+}
+
+.content__text {
+    font-weight: 600;
+    word-wrap: break-word;
+    line-height: 1.7;
+}
+
+.content__data {
+    width: 65%;
+}
+
+.content__data > figcaption {
+    margin-top: 0;
+    text-align: center;
+}
+
+
+@media (max-width: 900px) {
+    
+    .header > .header__title {
+        font-weight: 800;
+        font-size: 24px;
+    }
+
+    .content__image {
+        width: 100%;
+    }
+
+    .container {
+        width: 90%;
+    }
+
+    .content__data {
+        width: 100%;
+    }
+    
+}
+
+.darkmode-toggle {
+    z-index: 500;
+    box-shadow: 0px 0px 128px black;
+}
+
+:root {
+    --progress-color: #B3FFAE;
+    --progress-height: .5rem;
+}
+
+/* post container */
+.progressbar__container {
+    z-index: 1;
+}
+
+/* progress bar container */
+.progress-bar-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 999;
+    height: var(--progress-height);
+}
+
+/* progress bar */
+.progress-bar-container > .progress {
+    height: var(--progress-height);
+    background-color: var(--progress-color);
+    width: 0%;
+    float: left;
+}
+
+.darkmode--activated .content__subtitle,
+.darkmode--activated .content__title {
+    color: #FAEAB1;
+    z-index: 3;
+}

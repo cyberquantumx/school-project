@@ -1,0 +1,17 @@
+.blue {
+    background-color: #ABD9FF;
+    padding: 4px 8px;
+    margin: 0;
+    margin-right: 1px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.bold {
+    font-style: bold;
+}
+
+.cursive {
+    font-style: italic;
+}
+

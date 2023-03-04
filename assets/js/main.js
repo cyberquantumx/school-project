@@ -18,13 +18,3 @@ const options = {
 }
 
 window.addEventListener('load', () => new Darkmode(options).showWidget());
-
-document.onscroll = function(){ 
-    var pos = getVerticalScrollPercentage(document.body)
-    $('.progress').css('width', `${pos}%`);
-}
-  
-  function getVerticalScrollPercentage( elm ){
-    var p = elm.parentNode
-    return (elm.scrollTop || p.scrollTop) / (p.scrollHeight - p.clientHeight ) * 100
-  }

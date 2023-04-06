@@ -41,7 +41,8 @@ body {
 }
 
 .content > *, .content__data > * {
-    margin: 12px 0;
+    margin: 24px 0;
+    width: 100%;
 }
 
 .content__data {

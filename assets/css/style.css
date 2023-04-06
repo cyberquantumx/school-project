@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=PT+Mono&display=swap');
 
 *::selection, *::-moz-selection {
-    background: #E5BA73 ;
+    background-color: #E5BA73 ;
 }
 
 * {
@@ -24,27 +24,22 @@ figcaption {
     padding: 5px 20px;
     margin-left: auto;
     margin-right: auto;
-    width:fit-content;
+    width: 50% !important;
     border-radius: 15px;
-    font-size: 14px;
-    font-weight: 600;
-}
-
-.darkmode--activated figcaption {
-    background: none;
-    border: 3px solid #FAEAB1;
-    padding: 2px 20px;
-    color: #FAEAB1;
+    font-size: 18px;
+    font-weight: 800;
+    font-weight: bold;
+    border: 3px solid rgb(32,32,32);
 }
 
 .container {
     line-height: 24px;
-    font-size: 18px;
+    font-size: 20px;
 }
 
 .header > .header__title {
     font-weight: 800;
-    font-size: 36px;
+    font-size: 38px;
 }
 
 .header {
@@ -54,13 +49,13 @@ figcaption {
 }
 
 .content > .content__title {
-    font-size: 48px;
+    font-size: 50px;
     width: 100%;
     line-height: 1.0;
     font-weight: 800;
 }
 .content__data > .content__subtitle {
-    font-size: 36px;
+    font-size: 38px;
     font-weight: 800;
     line-height: 1.0;
     width: 100%;
@@ -93,7 +88,7 @@ figcaption {
     
     .header > .header__title {
         font-weight: 800;
-        font-size: 24px;
+        font-size: 26px;
     }
 
     .content__image {
@@ -108,43 +103,4 @@ figcaption {
         width: 100%;
     }
     
-}
-
-.darkmode-toggle {
-    z-index: 500;
-    box-shadow: 0px 0px 128px black;
-}
-
-:root {
-    --progress-color: #B3FFAE;
-    --progress-height: .5rem;
-}
-
-/* post container */
-.progressbar__container {
-    z-index: 1;
-}
-
-/* progress bar container */
-.progress-bar-container {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 999;
-    height: var(--progress-height);
-}
-
-/* progress bar */
-.progress-bar-container > .progress {
-    height: var(--progress-height);
-    background-color: var(--progress-color);
-    width: 0%;
-    float: left;
-}
-
-.darkmode--activated .content__subtitle,
-.darkmode--activated .content__title {
-    color: #FAEAB1;
-    z-index: 3;
 }

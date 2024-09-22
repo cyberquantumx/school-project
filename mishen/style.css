@@ -2,7 +2,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-
+    flex-direction: column;
     overflow-x: hidden;
 
     background: rgb(238,174,202);
@@ -19,8 +19,9 @@ h1 {
 }
 
 .container {
-    width: 300px;
-    height: 500px;
+    width: 100%;
+    max-width: 976px;
+    height: 400px;
 
     display: flex;
     justify-content: center;
@@ -28,7 +29,7 @@ h1 {
     flex-direction: column;
     flex-grow: 1;
 
-    margin: 50px;
+    margin-bottom: 10px;
     padding: 50px;
 
     background-color: rgba(255,255,255,0.5);
@@ -36,25 +37,49 @@ h1 {
 }
 
 input[type="number"]{
+    margin: 0;
     border: none;
     padding: 10px 5px 10px 5px;
     border-radius: 15px;
     text-indent: 15px;
+    width: 100px;
     background-color: rgb(57, 57, 57);
     color: white;
 }
 
-input[type="button"]{
+
+.container > h1 {
+    text-align: center;
+    margin: 6px;
+}
+.container > input{
+    margin: 0 0 6px 0;
+}
+
+#start {
     border: none;
     padding: 10px 5px 10px 5px;
     width: 150px;
     border-radius: 15px;
     background-color: rgb(57, 57, 57);
     color: white;
+    margin-top: 15px;
 }
-.container > h1 {
-    text-align: center;
+.container > p {
+    margin: 5px;
 }
-.container > input{
-    margin: 0 0 15px 0;
+
+canvas {
+    border-radius: 10px;
+    margin-top: 0px;
+}
+
+@media only screen and (max-width: 960px) {
+    .container  {
+        width: 100%;
+        border-radius: 0px;
+    }
+    body {
+        margin: 0;
+    }
 }

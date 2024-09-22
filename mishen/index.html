@@ -3,24 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Мишень квадрат</title>
+    <title>Мишень</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    
     <div class="container">
-        <h1>Мишень (квадрат)</h1>
-        <p>ирхин илья, ивт</p>
-        <p>x:</p>
-        <input type="number" placeholder="X" id="x"/>
-        <p>y:</p>
-        <input type="number" placeholder="Y" id="y"/>
+        <p id="score">Очки  : 0</p>
+        <h1>Мишень</h1>
+        <p>Ирхин Илья, ИВТ</p>
+        <p>X:</p>
+        <input type="number" placeholder="X" id="x" value="1"/>
+        <p>Y:</p>
+        <input type="number" placeholder="Y" id="y" value="1"/>
+        <p>Радиус:</p>
+        <input type="number" placeholder="радиус" id="rad" value="5" disabled/>
         <input type="button" id="start" value="Go" onclick="start()"></input>
+        
         <p id="res"></p>
-        <p>!((x > target_w) || (y > target_h))</p>
-        <p>target_w = 10 target_h = 10</p>
-        <a href="circle.html">круг</a> 
-
     </div>
+    <canvas height='1' width='1' id='canvas'></canvas>
     <script src="index.js"></script>
 </body>
 </html>

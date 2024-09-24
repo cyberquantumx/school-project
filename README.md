@@ -1,1 +1,1 @@
-# school-project
+# university projects

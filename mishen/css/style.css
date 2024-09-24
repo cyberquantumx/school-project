@@ -17,9 +17,6 @@ html {
     font-optical-sizing: auto;
     font-weight: 500;
     -webkit-user-select: none;
-	-khtml-user-select: none;
-	-moz-user-select: none;
-	-ms-user-select: none;
 	user-select: none;
 }
 
@@ -98,7 +95,7 @@ html {
     margin: 0 100px;
     width: 350px;
     background-color: #191919;
-    min-height: 500px;
+    min-height: 600px;
     border-radius: 20px;
     padding: 20px;
     justify-content: center;

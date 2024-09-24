@@ -184,6 +184,7 @@ canvas {
     margin-top: 15px;
     border-radius: 20px;
     background-color: #232323;
+    width: 100%;
 }
 
 @media only screen and (max-width: 960px) {

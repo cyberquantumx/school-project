@@ -1,61 +1,70 @@
+
 //базовые значения
+
+p = [0, 10, 5, 3, 2, 1]
 rad = 5
 side = 10
-points = 0
-E_COR = 'Введи координаты!'
+score = 0
 pos = []
+
 canvas = document.getElementById("canvas")
 ctx = canvas.getContext('2d')
 image = new Image(200,200);
 
-function r(text){
-    return document.getElementById('res').textContent = String(text);
+debug = true
+
+function msg({t, s, to = 2500}){
+    SnackBar({
+        message: t,
+        dismissible: true,
+        status: s,
+        timeout: to
+    });
 }
 
+function r(text, status="success"){
+    msg({t: text, s: status})
+}
+
+
 function update(){
-    document.getElementById('score').textContent = `Очки: ${points}`;
-    console.log(points);
+    document.getElementById('score').textContent = score;
+    debug ? console.log(score) : null;
     document.getElementById('x').value = '';
     document.getElementById('y').value = '';
+    document.cookie = `score=${score}`;
 }
 
 function getPos(){
     x = document.getElementById('x').value;
     y = document.getElementById('y').value;
-    rad = document.getElementById('rad').value;
     if (x == '' || y == '' || rad== ''){ 
-        return alert(E_COR) 
+       msg({t: 'Введите координаты', s: 'error'})
     } else {
-        console.log(x,y,rad,side)
+        debug ? console.log(x,y,rad,side, score) : null
         return [Math.abs(x),Math.abs(y), x,y]
     }
 }
 
 function start(){
     try {
+        _r = 0;
         pos = getPos()
         if(center() == true){
-            r('10 очков')
-            points += 10
+            _r = 1
         } else if(square() == true){
             if(giper2() == true){
-                r('5 очков')
-                points += 5
+                _r = 2
             } else if(romb() == true){
-                r('3 очка')
-                points += 3
+                _r = 3
             } else if(circle() == true){
-                r('2 очка')
-                points += 2
+                _r = 4
             } else {
-                r('1 очко')
-                points += 1
+                _r = 5
             }
-        } else {
-            r('не попал!')
         }
-        update()
-        
+        score += p[_r]
+        msg({t: _r ? `+${p[_r]}` : 'не попал', s: _r ? 'success' : 'warning'})
         image.onload = function() {
             canvas.width = (innerHeight - 8) / 3;
             canvas.height = (innerHeight - 8) / 3;
@@ -65,18 +74,18 @@ function start(){
             canvas.getContext("2d").drawImage(image,_x,0,image.naturalWidth * _scale, image.naturalHeight * _scale);
             __x = ((canvas.width/2)-7) + (canvas.width*(0.048*x))
             __y = ((canvas.height/2)-4) - (canvas.height*(0.048*y))
-            ctx.fillRect(__x, __y, 10,10);
             ctx.fillStyle = "white";
+            ctx.fillRect(__x, __y, 10,10);
+            ctx.fillStyle = "black";
             ctx.fillRect(__x+2.5, __y+2.5, 5,5);
         }
-        image.src = 'mishen.png';
+        image.src = 'mishen2.png';
         update();
         
     } catch (e) {
-        console.log('ошибка :(')
+        debug ? msg({t: String(e.message + e.stack), s: 'error', to: false}) : null;
     }
 }
-
 
 function square(){
     return ((pos[0] <= side) && (pos[1]) <= side)
@@ -91,18 +100,25 @@ function circle(){
     return ((pos[0]**2 + pos[1]**2) <= side**2)
 }
 
-function giper(){
-    
-    return (((x+side/2)**2+(y+side/2)**2>=(side/2)**2)&&
-    ((x-side/2)**2+(y+side/2)**2>=(side/2)**2)&&
-    ((x+side/2)**2+(y-side/2)**2>=(side/2)**2)&&
-    ((x-side/2)**2+(y-side/2)**2>=(side/2)**2))
-}
-
 function giper2(){
     return (1/pos[0] >= pos[1])
 }
 
 function romb(){
     return ((pos[0]+pos[1])/2<=side/2)
+}
+
+window.onload = function() {
+    cookie = document.cookie
+    if(cookie){
+        data = cookie.split('=')
+        console.log(data)
+        score = Number(data[1])
+        update()
+    }
+}
+
+function clearCookie(){
+    document.cookie = 'score=0';
+    window.location.reload();
 }

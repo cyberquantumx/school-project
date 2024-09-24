@@ -4,25 +4,50 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Мишень</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet" href="fonts/Montserrat.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/js-snackbar.css">
 </head>
 <body>
-    
-    <div class="container">
-        <p id="score">Очки  : 0</p>
-        <h1>Мишень</h1>
-        <p>Ирхин Илья, ИВТ</p>
-        <p>X:</p>
-        <input type="number" placeholder="X" id="x" value="1"/>
-        <p>Y:</p>
-        <input type="number" placeholder="Y" id="y" value="1"/>
-        <p>Радиус:</p>
-        <input type="number" placeholder="радиус" id="rad" value="5" disabled/>
-        <input type="button" id="start" value="Go" onclick="start()"></input>
-        
-        <p id="res"></p>
+    <div class="header">
+        <div class="header__left">
+            <div class="header__logo">
+                <span class="logo__name">Мишень</span>
+            </div>
+        </div>
+        <div class="header__right">
+            <div class="header__score">
+                <span class="score__text">Очки:</span>
+                <span class="score__value" id="score">0</span>
+            </div>
+        </div>
     </div>
-    <canvas height='1' width='1' id='canvas'></canvas>
-    <script src="index.js"></script>
+    <div class="container">
+        <div class="container__inputs">
+            <div class="input__object">
+                <pre>Позиция X:</pre>
+                <input type="number" value="" id="x" placeholder="от 0.0 до 999" max="999" maxlength="3">
+            </div>
+            <div class="input__object">
+                <pre>Позиция Y:</pre>
+                <input type="number" value="" id="y" placeholder="от 0.0 до 999" max="999" maxlength="3">
+            </div>
+            
+        </div>
+        <div class="container__start">
+            <input type="button" value="Go!!" onclick="start()">
+        </div>
+        
+        <canvas height='318' width='318' id='canvas'>
+        </canvas>
+    </div>
+    <div class="footer">
+        <input type="button" class="clear__data" value="Удалить сохранение" onclick="clearCookie()">
+        <span>Ирхин Илья, ИВТ</span>
+    </div>
+    
+    <script src="/js/js-snackbar.min.js"></script>
+    <script src="/js/index.js"></script>
 </body>
 </html>

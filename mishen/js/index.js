@@ -11,7 +11,7 @@ canvas = document.getElementById("canvas")
 ctx = canvas.getContext('2d')
 image = new Image(200,200);
 
-debug = true
+debug = false
 
 function msg({t, s, to = 2500}){
     SnackBar({

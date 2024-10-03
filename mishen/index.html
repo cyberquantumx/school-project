@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="fonts/Montserrat.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/js-snackbar.css">
+    <script src="js/jquery-3.7.1.slim.min.js"></script>
 </head>
 <body>
     <div class="header">
@@ -26,24 +27,22 @@
     <div class="container">
         <div class="container__inputs">
             <div class="input__object">
-                <pre>Позиция X:</pre>
-                <input type="number" value="" id="x" placeholder="от 0.0 до 999" max="999" maxlength="3">
+                <input type="number" value="" id="x" placeholder="X" max="999" maxlength="3">
             </div>
             <div class="input__object">
-                <pre>Позиция Y:</pre>
-                <input type="number" value="" id="y" placeholder="от 0.0 до 999" max="999" maxlength="3">
+                <input type="number" value="" id="y" placeholder="Y" max="999" maxlength="3">
             </div>
             
         </div>
         <div class="container__start">
-            <input type="button" value="Go!!" onclick="start()">
+            <input type="button" value="Go!!" onclick="check()">
         </div>
         
         <canvas height='318' width='318' id='canvas'>
         </canvas>
     </div>
     <div class="footer">
-        <input type="button" class="clear__data" value="Удалить сохранение" onclick="clearCookie()">
+        <input type="button" class="clear__data" value="Удалить сохранение" onclick="clearData()">
         <span>Ирхин Илья, ИВТ</span>
     </div>
     

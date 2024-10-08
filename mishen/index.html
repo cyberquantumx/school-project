@@ -8,12 +8,14 @@
     <link rel="stylesheet" href="fonts/Montserrat.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/js-snackbar.css">
-    <script src="js/jquery-3.7.1.slim.min.js"></script>
+
+    <script src="js/jquery-3.7.1.slim.min.js" defer></script>
 </head>
 <body>
     <div class="header">
         <div class="header__left">
             <div class="header__logo">
+                <img src="media/icon.png" class="logo__img" alt="">
                 <span class="logo__name">Мишень</span>
             </div>
         </div>
@@ -32,10 +34,14 @@
             <div class="input__object">
                 <input type="number" value="" id="y" placeholder="Y" max="999" maxlength="3">
             </div>
-            
+            <div class="input__object">
+                <pre>кол-во рандомных попаданий от -10 до 10</pre>
+                <input type="number" value="" id="count" placeholder="" max="999" maxlength="3" oninput="disableXY()">
+            </div>
         </div>
         <div class="container__start">
-            <input type="button" value="Go!!" onclick="check()">
+            <input type="button" value="Check" onclick="check()" id="check_btn">
+            <input type="button" value="Random Check" onclick="random()">
         </div>
         
         <canvas height='318' width='318' id='canvas'>
@@ -46,7 +52,7 @@
         <span>Ирхин Илья, ИВТ</span>
     </div>
     
-    <script src="js/js-snackbar.min.js"></script>
-    <script src="js/index.js"></script>
+    <script src="js/js-snackbar.min.js" defer></script>
+    <script src="js/index.js" defer></script>
 </body>
 </html>

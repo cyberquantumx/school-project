@@ -23,7 +23,7 @@ var BASE_IMAGE_SIZE = {
 
 var SNACKBAR_TIMEOUT = 2500;
 
-var DEBUG = true;
+var DEBUG = false;
 
 var POINTS = {
     MISS: 0,
@@ -152,8 +152,8 @@ function drawTarget() {
 }
 
 function drawHit(x, y) {
-    dotX = ((canvas.width / 2) - 7) + (canvas.width * (0.048 * x));
-    dotY = ((canvas.height / 2) - 4) - (canvas.height * (0.048 * y));
+    dotX = ((canvas.width / 2) - 5) + (canvas.width * (0.048 * x));
+    dotY = ((canvas.height / 2) - 6) - (canvas.height * (0.048 * y));
     ctx.fillStyle = DOT.STROKE.COLOR;
     ctx.fillRect(dotX, dotY, DOT.STROKE.SIZE, DOT.STROKE.SIZE);
     ctx.fillStyle = DOT.COLOR;
@@ -167,8 +167,14 @@ $(document).ready(() => {
     drawTarget();
 })
 
-function check() {
-    pos = getPosition();
+function check(randomState) {
+    if (randomState) pos = {
+        x: randomState[0],
+        y: randomState[1],
+        absX: Math.abs(randomState[0]),
+        absY: Math.abs(randomState[1])
+    }
+    else pos = getPosition()
     if (pos == null) return;
 
     result = (pos.x === 0 && pos.y === 0) ? POINTS.CENTER : 0 || //центр
@@ -190,7 +196,72 @@ function check() {
 
     Data.set('score', xor(score.toString()));
     valueObj.text(score);
+    if (randomState) return result;
 
+}
+
+async function random() {
+    
+    function getRandomNumber(min, max) {
+        return (Math.random() * (max - min) + min).toFixed(1);
+    }
+
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    drawTarget()
+    setTimeout(() => {
+        hits = [0, 0, 0, 0, 0]
+        for (let i = 0; i < $('#count').val(); i++) {
+            x = getRandomNumber(-10, 10);
+            y = getRandomNumber(-10, 10);
+            r = check([x, y])
+            switch (r) {
+                case POINTS.CENTER:
+                    hits[0]++
+                    break;
+                case POINTS.HYPERBOLA:
+                    hits[1]++
+                    break;
+                case POINTS.RHOMB:
+                    hits[2]++
+                    break;
+                case POINTS.CIRCLE:
+                    hits[3]++
+                    break;
+                case POINTS.SQUARE:
+                    hits[4]++
+                    break;
+            }
+        }
+        alert(`
+        Центр: ${hits[0]}
+        Гипербола: ${hits[1]}
+        Ромб: ${hits[2]}
+        Круг: ${hits[3]}
+        Квадрат: ${hits[4]}
+    `)
+    }, 500)
+
+}
+
+function disableXY() {
+    x = $("#x");
+    y = $("#y");
+    check_btn = $('#check_btn');
+    if ($('#count').val()) {
+        x.prop('disabled', true);
+        y.prop('disabled', true);
+        x.addClass('disabled');
+        y.addClass('disabled');
+        check_btn.addClass('disabled');
+        check_btn.prop('disabled', true);
+    } else {
+        x.prop('disabled', false);
+        y.prop('disabled', false);
+        x.removeClass('disabled');
+        y.removeClass('disabled');
+        check_btn.removeClass('disabled');
+        check_btn.prop('disabled', false);
+    }
 }
 
 function clearData() {

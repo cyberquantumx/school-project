@@ -34,8 +34,6 @@ var POINTS = {
     SQUARE: 1,
 }
 
-var KEY = 900;
-
 valueObj = $('#score');
 inputX = $('#x');
 inputY = $('#y');

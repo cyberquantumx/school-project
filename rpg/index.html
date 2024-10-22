@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/jquery-3.7.1.min.js"></script>
+    
+</head>
+
+<body>
+    <div class="startUser">
+        <input type="text" id="regName" placeholder="Введите имя">
+        <button id="regButton" onclick="entry()">Начать</button>
+    </div>
+    <div id="root" class="roomContainer disable">
+        <h1 id="title"></h1>
+        <p id="description"></p>
+        <img class="roomImg" id="roomImage">
+        <p>Перемещение:</p>
+        <div id="buttonsRoom" class="buttons"></div>
+        <p>Действия:</p>
+        <div id="buttonsRoomEvents" class="buttons"></div>
+        <div class="profile">
+            <p id="username">-</p>
+            <p id="balance">-</p>
+            <p id="hp">-</p>
+            <p id="energy">-</p>
+            <p id="mood">-</p>
+        </div>
+        <div class="more">
+            
+        </div>
+    </div>
+    <script src="js/data.js"></script>
+    <script src="js/user.js"></script>
+    <script src="js/events.js"></script>
+    <script src="js/rooms.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/dev.js"></script>
+    
+</body>
+
+</html>

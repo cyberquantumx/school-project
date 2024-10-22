@@ -1,7 +1,7 @@
 const changeLogURL = 'https://t.me/changelogrpg0000',
     gameVersion = '0.2.1';
 
-const debug = true;
+const debug = false;
 
 
 let rooms = [{

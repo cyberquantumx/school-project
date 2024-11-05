@@ -4,47 +4,76 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Student</title>
-    <link rel="stylesheet" href="css/style.css">
-    <script src="js/jquery-3.7.1.min.js"></script>
-    
+    <title>RPG</title>
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/js-snackbar.css">
+    <link rel="stylesheet" href="css/createUser.css">
+    <link rel="stylesheet" href="css/room.css">
+    <link rel="stylesheet" href="css/events.css">
+    <link rel="stylesheet" href="css/gameInfo.css">
+    <link rel="stylesheet" href="css/profile.css">
+    <link rel="stylesheet" href="css/v2.css">
+
 </head>
 
 <body>
     <div class="startUser">
-        <h1>Назовите персонажа</h1>
         <div class="startUser__form">
             <input type="text" id="regName" placeholder="Введите имя">
             <button id="regButton" onclick="entry()">Начать</button>
         </div>
-        
+
+    </div>
+    <div class="timeoutContainer disabled" id="timeoutContainerId">
+        <p id="timeoutText"></p>
     </div>
     <div id="root" class="roomContainer disable">
+        <div class="profile">
+            <div class="profile__top">
+                <img class="avatar" src="img/avatar.png" alt="">
+                <div class="top__info">
+                    <p id="username">-</p>
+                    <p id="balance">-</p>
+                </div>
+                
+                
+            </div>
+            <div class="profile__down">
+                <div class="indicator">
+                    <p id="hp">-</p>
+                    <progress id="hp__bar" class="pb" max="10" value="5">50%</progress>
+                </div>
+                <div class="indicator">
+                    <p id="energy">-</p>
+                    <progress id="energy__bar" class="pb" max="10" value="5">50%</progress>
+                </div>
+                
+                <div class="indicator">
+                    <p id="mood">-</p>
+                <progress id="mood__bar" class="pb" max="10" value="5">50%</progress>
+            </div>
+                
+            </div>
+
+        </div>
         <h1 id="title"></h1>
         <p id="description"></p>
         <img class="roomImg" id="roomImage">
-        <p>Перемещение:</p>
+        <p class="subText">Перемещение:</p>
         <div id="buttonsRoom" class="buttons"></div>
-        <p>Действия:</p>
+        <p class="subText">Действия:</p>
         <div id="buttonsRoomEvents" class="buttons"></div>
-        <div class="profile">
-            <p id="username">-</p>
-            <p id="balance">-</p>
-            <p id="hp">-</p>
-            <p id="energy">-</p>
-            <p id="mood">-</p>
-        </div>
-        <div class="more">
-            
-        </div>
+        <button id="clearData" onclick="clearData()">Очистить данные</button>
     </div>
+    <script src="js/js-snackbar.min.js"></script>
     <script src="js/data.js"></script>
+    <script src="js/tools.js"></script>
     <script src="js/user.js"></script>
-    <script src="js/events.js"></script>
     <script src="js/rooms.js"></script>
+    <script src="js/events.js"></script>
     <script src="js/main.js"></script>
     <script src="js/dev.js"></script>
-    
+
 </body>
 
 </html>

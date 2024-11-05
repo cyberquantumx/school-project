@@ -9,7 +9,7 @@ function initBaseInfo() {
     _changelog.target = '_blank';
     _changelog.rel = 'noopener noreferrer';
     _changelog.href = changeLogURL;
-    _changelog.innerText = 'changelog';
+    _changelog.innerText = '';
 
     let _gameVer = document.createElement('p');
     _gameVer.innerText = 'v ' + gameVersion;
@@ -23,13 +23,14 @@ function initBaseInfo() {
     console.log(initBaseInfo.name + ' success')
 }
 
-function initGameElements(){
-    console.log(initGameElements.name + ' success')
+async function init() {
+    await initBaseInfo();
+
+    localStorage.setItem('v', gameVersion);
 }
 
-function init() {
-    initBaseInfo();
-    initGameElements();
+function reload() {
+    window.location.reload();
 }
 
 window.onload = async () => {
@@ -37,5 +38,6 @@ window.onload = async () => {
     await init();
     await render();
     await initDebug();
+    await loadUser();
     console.timeLog('load');
 };

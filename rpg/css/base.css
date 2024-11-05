@@ -1,0 +1,25 @@
+* {
+    margin: 0;
+    padding: 0;
+    user-select: none;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--bgColor) !important;
+}
+
+h1 {
+    margin: 10px;
+}
+
+p {
+    margin-bottom: 5px;
+}
+
+.disable {
+    display: none !important;
+}

@@ -1,0 +1,18 @@
+
+.gameInfo {
+    pointer-events: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 50px;
+    font-size: 12px;
+    opacity: .3;
+    padding: 10px;
+    border-radius: 10px;
+    width: 95%;
+}
+
+.gameInfo > * {
+    pointer-events: none;
+}

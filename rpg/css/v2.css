@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css2?family=Martian+Mono:wght@100..800&display=swap');
+:root {
+    --bgColor: rgb(27, 27, 27);
+    --panelColor: rgba(255, 255, 255, 0.05);
+    --textColor: rgb(255, 255, 255);
+    --shadowColor: rgba(255, 255, 255, 0.25);
+    --shadowColor2: rgba(255,255,255,0.02);
+    --strokeColor: gray;
+}
+
+body {
+    font: initial;
+}
+
+body {
+    background-color: var(--bgColor) !important;
+    color: var(--textColor);
+    font-family: "Martian Mono", monospace;
+    font-weight: 400;
+}
+
+button, * {
+    font-family: "Martian Mono", monospace;
+    font-weight: 400;
+}
+
+
+
+html, body {
+    height: 100% !important;
+    margin: 0px 10px;
+}
+  
+
+button, input {
+    background-color: var(--panelColor) !important;
+    color: var(--textColor);
+    border: none !important;
+    box-shadow: 4px 4px 16px 0px rgba(0, 0, 0, 0.2);
+}
+
+h1, p {
+    color: var(--textColor);
+}
+
+.indicator {
+    background-color: var(--panelColor);
+    margin: 10px 10px 10px 0 !important;
+    padding: 5px 5px 5px 15px !important;
+    flex-basis: 100%;
+    flex-grow: 1;
+    box-shadow: 4px 4px 62px 0px rgba(0, 0, 0, 0.66);
+}
+
+.profile__down {
+    justify-content: space-evenly !important;
+    align-items: center !important;
+    filter: drop-shadow(5px 5px 8px var(--shadowColor));
+}
+
+.pb::-webkit-progress-bar {
+    background-color: var(--panelColor);
+    border-radius: 7px;
+    height: 10px;
+    margin-bottom: 10px;
+}
+
+#hp__bar::-webkit-progress-value {
+    background-color: rgb(255, 45, 45);
+}
+
+#energy__bar::-webkit-progress-value {
+    background-color: rgb(255, 255, 70);
+}
+
+#mood__bar::-webkit-progress-value {
+    background-color: rgb(148, 255, 255);
+}
+
+.avatar {
+    filter: invert();
+}
+
+.profile {
+    box-shadow: 4px 4px 62px 0px rgba(0, 0, 0, 0.66);
+    width: 90%;
+    margin-top: 0px;
+    margin-bottom: 10px;
+}
+
+.roomImg {
+    box-shadow: 4px 4px 62px 0px rgba(110, 110, 110, 0.4);
+}
+
+
+
+b, h1 {
+    font-weight: 900;
+}
+
+.subText {
+    margin: 20px 0 0 0;
+}
+
+.gameInfo {
+    margin-top: 0px;
+}
+
+.roomContainer {
+    margin: 0;
+}
+
+.indicator > p {
+    font-size: 14px;
+}
+
+body {
+    display: initial
+}
+
+.profile {
+    width: 50%;
+}
+
+a {
+    color: var(--textColor);
+}
+
+button {
+    font-weight: normal !important;
+}
+
+p, button, a {
+    font-size: 12px
+}
+
+.buttons {
+    height: auto;
+    flex-wrap: wrap;
+}
+
+.profile {
+    width: 90%;
+    max-width: 500px;
+}

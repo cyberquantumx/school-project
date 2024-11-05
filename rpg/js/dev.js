@@ -1,3 +1,3 @@
 function initDebug(development = true){
-    debug ? entry('Test') : null;
+    debug ? entry('Саша') : null;
 }

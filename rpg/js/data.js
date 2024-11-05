@@ -1,8 +1,7 @@
 const changeLogURL = 'https://t.me/changelogrpg0000',
-    gameVersion = '0.2.1';
+    gameVersion = '0.6';
 
 const debug = false;
-
 
 let rooms = [{
         "title": "Комната в общаге",
@@ -14,7 +13,7 @@ let rooms = [{
         ],
         "events": [{
             "title": "👀 Посмотреть в окно",
-            "event": "LookWindow()",
+            "event": "Events.lookWindow()",
             "id": "lookwindow"
         }]
     },
@@ -46,7 +45,7 @@ let rooms = [{
         "exits": [],
         "events": [],
         "roomEvent": [{
-            "event": "die()",
+            "event": "Events.die()",
             "id": "die"
         }]
     },
@@ -56,6 +55,16 @@ let rooms = [{
         "img": "room4.png",
         "id": 4,
         "exits": [1],
-        "events": []
+        "events": [{
+            "title": "❤️ Восстановить 5 ед здоровья (-20₽) ",
+            "event": "Events.healHp(0)",
+            "id": "healhp0"
+        },
+        {
+            "title": "❤️ Восстановить 10 ед здоровья (-40₽) ",
+            "event": "Events.healHp(1)",
+            "id": "healhp1"
+        }
+    ]
     }
 ];

@@ -1,0 +1,13 @@
+@import "/css/components/scrollbar.css";
+@import "/css/components/panel.css";
+
+body {
+    display: flex;
+    justify-content: left;
+}
+
+@media (pointer:none), (pointer:coarse) {
+    body {
+        flex-direction: column;
+    }
+}

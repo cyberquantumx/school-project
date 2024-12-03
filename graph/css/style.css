@@ -1,5 +1,5 @@
-@import "/css/components/scrollbar.css";
-@import "/css/components/panel.css";
+@import "components/scrollbar.css";
+@import "components/panel.css";
 
 body {
     display: flex;

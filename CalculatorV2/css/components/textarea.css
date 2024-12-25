@@ -1,0 +1,13 @@
+textarea {
+    font-size: 21px;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    text-align: center;
+    padding: 5px;
+}
+
+textarea:disabled, textarea {
+    background-color: #0d0d0d;
+    color: #f7f7f7;
+}

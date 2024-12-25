@@ -1,0 +1,33 @@
+.operands {
+    width: 70px;
+    height: 70px;
+    border: none;
+    border-radius: 15px;
+    text-align: center;
+
+    outline: none;
+
+    background-color: #0d0d0d;
+    border: none;
+    border: 3px solid #afafaf;
+    color: #f7f7f7;
+
+    margin: 5px;
+
+    font-size: 24px;
+}
+
+.operands:hover{
+    cursor: pointer;
+    border: 3px solid #8f8f8f;
+    color: #cfcfcf;
+    transition: .25s;
+}
+.operands:active {
+    opacity: .5;
+    transition: .125s;
+}
+
+.operands[data-operand="prod"]{
+    font-size: 24px;
+}

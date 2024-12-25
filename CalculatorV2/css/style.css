@@ -1,0 +1,54 @@
+@import "components/font.css";
+
+
+@import "components/textarea.css";
+@import "components/calcBtns.css";
+
+@import "components/calculator.css";
+
+@import "components/inputContainer.css";
+@import "components/outputContainer.css";
+@import "components/operandsContainer.css";
+
+.hide {
+    display: none;
+}
+.disabled {
+    opacity: .4 !important; 
+    cursor: auto !important;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    user-select: none;
+}
+
+#app {
+    max-width: 100%;
+    margin: auto;
+    text-align: center;
+}
+
+body {
+    background-color: #0d0d0d;
+    color: #f7f7f7;
+    font-family: "Rubik", serif;
+}
+
+
+body {
+    margin: 10px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.info {
+    font-size: 12px;
+    opacity: .3;
+    resize: none;
+    width: 600px !important;
+    height: 200px;
+    overflow: hidden;
+}

@@ -1,0 +1,9 @@
+.operandsContainer {
+    width: 320px;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items:baseline;
+    flex-wrap: wrap;
+    flex-grow: 1;
+}

@@ -6,7 +6,23 @@ class MatrixCalculator extends RealCalculator {
             array.map((el, j) => calc.add(el, b.values[i][j]))
         ));
     }
-    
+
+    addComplex(a, b) {
+        if (a.values.length !== b.values.length || a.values[0].length !== b.values[0].length) {
+            throw new Error("Неверные размеры комплексных матриц для сложения");
+        }
+
+        const resultValues = a.values.map((row, i) => 
+            row.map((el, j) => {
+                const complexA = el;
+                const complexB = b.values[i][j];
+                return this.get(complexA).add(complexA, complexB);
+            })
+        );
+
+        return new Matrix(resultValues);
+    }
+
     sub(a, b) {
         const calc = this.get(a.values[0][0]);
         return new Matrix(a.values.map((array, i) => array.map((el, j) => calc.sub(el, b.values[i][j]))));

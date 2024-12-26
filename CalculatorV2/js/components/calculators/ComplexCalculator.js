@@ -7,31 +7,39 @@ class ComplexCalculator extends RealCalculator {
     sub(a, b) {
         return new Complex(a.re - b.re, a.im - b.im);
     }
-    
+
     mult(a, b) {
-        return new Complex((a.re * b.re - a.im * b.im), (a.re * b.im + a.im * b.re));
+        return new Complex(
+            a.re * b.re - a.im * b.im,
+            a.re * b.im + a.im * b.re
+        );
     }
 
     div(a, b) {
+        const denominator = b.re * b.re + b.im * b.im;
         return new Complex(
-            (a.re * b.re + a.im * b.im) / (b.re * b.re + b.im * b.im), 
-            (b.re * a.im - a.re * b.im) / (b.re * b.re + b.im * b.im)
+            (a.re * b.re + a.im * b.im) / denominator, 
+            (a.im * b.re - a.re * b.im) / denominator
         );
     }
 
     prod(a, p) {
-        return new Complex(p * a.re, p * a.im);
+        return new Complex(a.re * p, a.im * p);
     }
 
-    zero() { return new Complex(); }
+    zero() { 
+        return new Complex();
+    }
 
-    one() { return new Complex(super.one()); }
+    one() { 
+        return new Complex(1, 0);
+    }
 
-    pow (a, n) {
-        let c = this.one();
-        for(let i = 0; i < n; i++) {
-            c = this.mult(a, c);
+    pow(a, n) {
+        let result = this.one();
+        for (let i = 0; i < n; i++) {
+            result = this.mult(result, a);
         }
-        return c;
-    } 
+        return result;
+    }
 }

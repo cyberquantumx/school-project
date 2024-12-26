@@ -3,16 +3,16 @@ class Complex {
         this.re = re;
         this.im = im;
     }
-
-    toString() {
-        if(this.im) {
-            if(this.im < 0) {
-                return `${this.re}-i*${-this.im}`
-            }
-            return `${this.re}+i*${this.im}`
-
-        }
-        return this.re.toString();
-    }
     
+    toString() {
+        if (this.im === 0) {
+            return this.re.toString();
+        } else if (this.re === 0) {
+            return `${this.im}i`;
+        } else if (this.im < 0) {
+            return `${this.re} - ${-this.im}i`;
+        } else {
+            return `${this.re} + ${this.im}i`;
+        }
+    }
 }

@@ -16,4 +16,5 @@
 
 .results > textarea {
     resize: none;
+    height: 200px;
 }

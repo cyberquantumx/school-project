@@ -1,0 +1,50 @@
+.block {
+    margin: 8px 0px 0px;
+    padding: 64px 32px;
+    background: rgb(244, 244, 244);
+    border-radius: 24px;
+
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    border-radius: 24px;
+    overflow: hidden;
+
+    position: relative;
+    
+    margin: 50px 0;
+
+    /* box-shadow: 0px 25px 50px 0px rgb(0, 0, 0, 0.3); */
+}
+
+.block > h1 {
+    z-index: 1;
+    margin: 0px;
+    font-size: 7rem;
+    line-height: 7rem;
+    letter-spacing: -0.02em;
+}
+
+.block > p {
+    z-index: 1;
+    margin: 20px 0px 4rem;
+    font-size: 16px;
+    line-height: 20px;
+}
+
+.block__black {
+    background-color: rgb(0, 0, 0);
+    color: white;
+}
+
+.block > .bg {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: 0;
+    transform: translate3d(140px, 100px, 0) rotate(20deg);
+    width: 525px;
+    height: 525px;
+}

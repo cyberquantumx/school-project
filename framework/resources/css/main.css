@@ -1,0 +1,41 @@
+@import url('header.css');
+@import url('footer.css');
+@import url('button.css');
+@import url('block.css');
+@import url('styles.css');
+@import url('animations.css');
+@import url('mobile.css');
+@import url('another.css');
+
+* {
+    margin: 0;
+    padding: 0;
+    
+}
+
+body, html {
+    font-family: "Inter";
+    /* font-family: "IBM Plex Mono"; */
+    color: rgb(32,32,32);
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+.container {
+    position: relative;
+    padding: 30px 100px;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    flex-direction: column;
+    user-select: none;
+}

@@ -1,0 +1,64 @@
+.header__links > a {
+    transition: .3s;
+}
+
+.header__links > a:hover {
+    opacity: .5;
+    transition: .3s;
+    transform: translateX(5px);
+}
+
+.header__links > #menuLink:hover {
+    transform: translateX(0);
+    opacity: .5 !important;
+    transition: .3s !important;
+}
+
+.block {
+    transition: .3s;
+}
+
+.block:hover {
+    transform: scale(1.025);
+    transition: .3s;
+}
+
+.block > .bg {
+    transition: .3s;
+}
+
+.block > .bg:hover {
+    transform: translate3d(140px, 100px, 0) rotate(15deg);  
+    transition: .3s;
+}
+.button {
+    transition: .3s;
+}
+.button:hover {
+    filter: invert();
+    transition: .4s;
+    cursor: pointer;
+}
+
+.img__button {
+    transition: .3s;
+}
+
+.img__button:hover {
+    cursor: pointer;
+    transform: translate3d(50px, 0, 0) scale(1.2);
+    transition: .3s;
+}
+
+.heart {
+    animation: anime .3s infinite ease-in alternate;
+}
+
+@keyframes anime {
+	from {
+		transform: scale(1);
+	}
+	to {
+		transform: scale(1.1);
+	}
+}

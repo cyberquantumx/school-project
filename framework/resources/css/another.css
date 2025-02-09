@@ -1,0 +1,9 @@
+.heart {
+    filter: brightness(1.1) drop-shadow(0 0 20px rgba(255, 0, 0, 0.4));
+    opacity: 0.8;
+    
+}
+
+.tg {
+    filter: drop-shadow(0 0 100px rgba(0, 89, 255, 0.5));
+}

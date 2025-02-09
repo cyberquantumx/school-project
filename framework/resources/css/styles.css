@@ -1,0 +1,15 @@
+.cursive {
+    font-style: italic;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.red {
+    color: rgb(255, 221, 221);
+}
+
+.bgRed {
+    background-color: rgb(255, 221, 221);
+}

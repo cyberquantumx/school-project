@@ -1,0 +1,57 @@
+.button__circle {
+    width: 40px;
+    height: 40px;
+
+    border: none;
+    background-color: black;
+    color: white;
+
+    border-radius: 100%;
+}
+
+.button__gray {
+    background-color: rgb(244, 244, 244);
+    color: black;
+}
+
+
+.button__circle:hover {
+    filter: invert();
+    transition: .4s;
+}
+
+.button__circle {
+    transition: .2s;
+    cursor: pointer;
+}
+
+.button__circle > svg {
+    color: white;
+}
+
+.button {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    padding: 15px;
+    background-color: white;
+    color: black;
+    vertical-align: middle;
+    font-size: 24px;
+    border: none;
+    border-radius: 20px;
+    margin: 15px 0 15px 0;
+}
+
+.button > svg {
+    width: 24px;
+    height: 24px;
+    margin-left: 10px;
+    color: black;
+}
+
+.img__button {
+    background: none;
+    border: none;
+    transform: translate3d(50px, 0, 0) scale(1);
+}

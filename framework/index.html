@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Framework</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="resources/css/main.css">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+</head>
+<body>
+    <header>
+        <div class="header">
+            <img class="header__logo" src="resources/imgs/sparkles.png" alt="">
+            <div class="header__links">
+                <a href="" class="change" id="menuLink" data-linkid="0">
+                    <p class="bold">меню</p>
+                </a>
+                <a href="" class="change" data-linkid="1">
+                    <p>мишень</p>
+                    <svg width="27" height="18" viewBox="0 0 27 18" fill="none" xmlns="http://www.w3.org/2000/svg" class="sc-os5xzd-10 jIcjMY"><path d="M0.999999 9L26 9M26 9L17.6667 1M26 9L17.6667 17" stroke="#000000" stroke-linecap="square"></path></svg>
+                </a>
+                <a href="" class="change" data-linkid="2">
+                    <p>рпгшка</p>
+                    <svg width="27" height="18" viewBox="0 0 27 18" fill="none" xmlns="http://www.w3.org/2000/svg" class="sc-os5xzd-10 jIcjMY"><path d="M0.999999 9L26 9M26 9L17.6667 1M26 9L17.6667 17" stroke="#000000" stroke-linecap="square"></path></svg>
+                </a>
+                <a href="" class="change" data-linkid="3">
+                    <p>калькулятор</p>
+                    <svg width="27" height="18" viewBox="0 0 27 18" fill="none" xmlns="http://www.w3.org/2000/svg" class="sc-os5xzd-10 jIcjMY"><path d="M0.999999 9L26 9M26 9L17.6667 1M26 9L17.6667 17" stroke="#000000" stroke-linecap="square"></path></svg>
+                </a>
+                <!-- <a href="">фигуры</a> -->
+            </div>
+        </div>
+    </header>
+    <div class="container menuContainer" >
+        <div class="block block__black" data-aos="fade-up" data-aos-duration="1000">
+            <img class="bg tg" src="resources/imgs/tg.png" alt="">
+            <h1>
+                мой классный
+                <br>
+                тг профиль
+            </h1>
+            <p>вы можете мне написать, но не знаю честно зачем<br>
+                <span class="cursive">(не советую, это не реклама)</span>
+            </p>
+            <div class="button__container">
+                <button class="button__circle" id="tgBtn">
+                    <svg width="27" height="18" viewBox="0 0 27 18" fill="none" xmlns="http://www.w3.org/2000/svg" class="sc-os5xzd-10 jIcjMY"><path d="M0.999999 9L26 9M26 9L17.6667 1M26 9L17.6667 17" stroke="#ffffff" stroke-linecap="square"></path></svg>
+                </button>
+            </div>
+            
+        </div>
+        <div class="block" data-aos="fade-up" data-aos-duration="1000">
+            <img class="bg bg2 cool" src="resources/imgs/cool.png" alt="">
+            <h1>мои проекты:</h1>
+            <p>это типа фреймворк..тут куча проектов моих</p>
+            <div class="button__container">
+                <button class="button">мишень 
+                    <svg width="27" height="18" viewBox="0 0 27 18" fill="none" xmlns="http://www.w3.org/2000/svg" class="sc-os5xzd-10 jIcjMY"><path d="M0.999999 9L26 9M26 9L17.6667 1M26 9L17.6667 17" stroke="#000000" stroke-linecap="square"></path></svg>
+                </button>
+                <button class="button">рпгшка 
+                    <svg width="27" height="18" viewBox="0 0 27 18" fill="none" xmlns="http://www.w3.org/2000/svg" class="sc-os5xzd-10 jIcjMY"><path d="M0.999999 9L26 9M26 9L17.6667 1M26 9L17.6667 17" stroke="#000000" stroke-linecap="square"></path></svg>
+                </button>
+                <button class="button">калькулятор 
+                    <svg width="27" height="18" viewBox="0 0 27 18" fill="none" xmlns="http://www.w3.org/2000/svg" class="sc-os5xzd-10 jIcjMY"><path d="M0.999999 9L26 9M26 9L17.6667 1M26 9L17.6667 17" stroke="#000000" stroke-linecap="square"></path></svg>
+                </button>
+            </div>
+            
+        </div>
+        <div class="block bgRed" data-aos="fade-up" data-aos-duration="1000">
+            <img class="bg bg2 love" src="resources/imgs/smile.png" onclick="" alt="">
+            <h1>донатик >_<</h1>
+            <p>я буду признателен, если ты мне дашь денежку :3</p>
+            <div class="button__container">
+                <button class="img__button heart">
+                    <img src="resources/imgs/heart.png" alt="">
+                </button>
+            </div>
+            
+        </div>
+    </div>
+    <footer>
+        <div class="footer">
+            <p class="bold">cyberboyx</p>
+            <p>2025</p>
+        </div>
+    </footer>
+    <script src="resources/js/jquery-3.7.1.slim.min.js"></script>
+    <script src="resources/js/index.js"></script>
+</body>
+</html>
